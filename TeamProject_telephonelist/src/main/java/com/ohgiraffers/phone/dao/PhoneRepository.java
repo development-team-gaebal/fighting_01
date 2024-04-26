@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.phone.dao;
+package com.ohgiraffers.phone.dao;
 
 public class PhoneRepository {
 }

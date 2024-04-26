@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.phoneDB;
+package com.ohgiraffers.phoneDB;
 
 public class PhoneDB {
 
