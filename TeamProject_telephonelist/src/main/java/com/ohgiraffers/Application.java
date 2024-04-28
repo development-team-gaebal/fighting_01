@@ -46,7 +46,14 @@ public class Application {
 
 
                     break;
+
                 case 3: //수정
+                    System.out.println("이름 입력 : ");
+                    name = sc.nextLine();
+                    System.out.println("1. 이름 /2. 전화번호/ 3.주소 중 어떤 정보를 수정하겠습니까?");
+                    num = sc.nextInt();
+//                    System.out.println("수정할 내용 : ");
+
 
                     break;
                 case 4: //조회 //+수정 +삭제
@@ -63,8 +70,6 @@ public class Application {
                     System.out.println("입력 오류");
                     break;
             }
-
-
 
 
 
