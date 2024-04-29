@@ -10,7 +10,7 @@ public class PhoneDTO {
     private String address;
 
 
-    public PhoneDTO() { }
+//    public PhoneDTO() { }
 
     public PhoneDTO(String name, String number, String address) {
         this.name = name;
@@ -46,10 +46,11 @@ public class PhoneDTO {
     @Override
     public String toString() {
         return "PhoneDTO{" +
-                "name='" + name + '\'' +
-                ", number='" + number + '\'' +
-                ", address='" + address + '\'' +
+                "이름 ='" + name + '\'' +
+                ", 전화번호 ='" + number + '\'' +
+                ", 주소 ='" + address + '\'' +
                 '}';
     }
+
 
 }
