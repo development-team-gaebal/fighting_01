@@ -10,7 +10,7 @@ public class PhoneDTO {
     private String address;
 
 
-//    public PhoneDTO() { }
+    public PhoneDTO() { }
 
     public PhoneDTO(String name, String number, String address) {
         this.name = name;
@@ -51,6 +51,5 @@ public class PhoneDTO {
                 ", 주소 ='" + address + '\'' +
                 '}';
     }
-
 
 }

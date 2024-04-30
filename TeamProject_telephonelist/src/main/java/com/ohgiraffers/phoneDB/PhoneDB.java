@@ -1,8 +1,8 @@
 package com.ohgiraffers.phoneDB;
 
 import com.ohgiraffers.phone.dto.PhoneDTO;
-
 import java.util.ArrayList;
+
 
 public class PhoneDB {
 
@@ -13,7 +13,7 @@ public class PhoneDB {
 
     private PhoneDB() {
         phones = new ArrayList();
-        PhoneDTO phoneDTO = new PhoneDTO();
+        PhoneDTO phoneDTO = new PhoneDTO("이름", "번호", "주소" );
         phones.add(phoneDTO);
     }
 
