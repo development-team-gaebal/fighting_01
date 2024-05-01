@@ -46,10 +46,6 @@ public class PhoneController {
 
     public void phoneModify(String name){
 
-        if(name != null && !name.isEmpty()){
-            return;
-        }
-
         System.out.println("어떤 정보를 수정하시겠습니까? 1.이름 / 2.번호 / 3.주소 : ");
         String input = sc.nextLine();
         int num = 0;
@@ -65,7 +61,6 @@ public class PhoneController {
 
         System.out.println("수정할 정보를 입력 : ");
         String modi = sc.nextLine();
-        sc.nextLine();
 
         phoneService.phoneModify(name, num, modi);
     }
