@@ -49,7 +49,8 @@ public class PhoneDTO {
                 "이름 ='" + name + '\'' +
                 ", 전화번호 ='" + number + '\'' +
                 ", 주소 ='" + address + '\'' +
-                '}';
+                '}'
+                + '\n';
     }
 
 }

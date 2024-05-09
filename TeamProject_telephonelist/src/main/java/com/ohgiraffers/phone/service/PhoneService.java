@@ -19,19 +19,24 @@ public class PhoneService {
 //                return "등록실패";
 //            if (!phoneDTO.getAddress().equals(""))
 //                return "등록실패";
-//
 //        }
-
         return phoneRepository.phone(phones);
     }
 
-
-    public String phoneModify(String name, int no, String modi){
-
-        return phoneRepository.phoneModify(name, no, modi);
+    public String phoneModify(int index, PhoneDTO modifyPhone) {
+        String result = phoneRepository.phoneModify(index, modifyPhone);
+        return result;
     }
 
+//    public String phoneModify(name, number, address){
+//
+//        return phoneRepository.phoneModify(name, number, address);
+//    }
 
+    public String phoneDelete(int no) {
+        String result = phoneRepository.phoneDelete(no);
+        return result;
+    }
 
     public ArrayList phoneRead() {
 

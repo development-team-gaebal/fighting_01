@@ -42,28 +42,56 @@ public class PhoneController {
 
     }
 
+    public  String phoneDelete(int no){
+        String result = phoneService.phoneDelete(no);
 
-
-    public void phoneModify(String name){
-
-        System.out.println("어떤 정보를 수정하시겠습니까? 1.이름 / 2.번호 / 3.주소 : ");
-        String input = sc.nextLine();
-        int num = 0;
-        if (input.equals("1")) {
-                num = 1;
-        } else if (input.equals("2")) {
-                num = 2;
-        } else if (input.equals("3")) {
-                num = 3;
-        } else {
-                return;
-        }
-
-        System.out.println("수정할 정보를 입력 : ");
-        String modi = sc.nextLine();
-
-        phoneService.phoneModify(name, num, modi);
+        return result;
     }
+
+    public String phoneModify(int index, PhoneDTO modifyPhone){
+        String result = phoneService.phoneModify(index,modifyPhone);
+        return result;
+    }
+
+//    public void phoneModify(int num){
+//          boolean modify = true;
+//        while(modify){
+//                      System.out.println("1. 이름");
+//                      System.out.println("2. 번호");
+//                      System.out.println("3. 주소");
+//                      System.out.println("4. 뒤로(수정취소)");
+//                      int modi = sc.nextInt();
+//                      sc.nextLine();
+//           switch(modi) {
+//                  case 1: //이름
+//                      System.out.println("이름 입력 : ");
+//                      name = sc.nextLine();
+
+//                      break;
+//                  case 2: //번호
+//                      System.out.println("번호 입력 : ");
+//                      number = sc.nextLine();
+
+//                      break;
+//                  case 3: //주소
+//                      System.out.println("주소 입력 : ");
+//                      address = sc.nextLine();
+//
+//                      break;
+//                  case 4: //수정취소
+//
+//                    modify = false;
+//
+//                default:
+//                    System.out.println("입력 오류");
+//                    break;
+//            }
+//
+//           System.out.println(result);
+//           modify = sc.nextBoolean();
+//       }
+//        phoneService.phoneModify(name, number, address);
+//    }
 
 
 
@@ -72,7 +100,7 @@ public class PhoneController {
     public String phoneRead(){
 
         ArrayList phoneList = phoneService.phoneRead();
-        String viewAll = "주문 목록 : " + phoneList.toString();
+        String viewAll = "목록 : " + phoneList.toString();
         return viewAll;
 
     }

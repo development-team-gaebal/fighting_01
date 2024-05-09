@@ -16,15 +16,12 @@ public class PhoneRepository {
     public String phone(PhoneDTO[] phones)
     {
         int oldList = phoneDB.getPhones().size();
-
         for (PhoneDTO phoneDTO : phones) {
             phoneDB.setPhoneDB(phoneDTO);
         }
-
         if (oldList >= phoneDB.getPhones().size()) {
             return "등록실패";
         }
-
         return "등록성공";
     }
 
@@ -42,35 +39,44 @@ public class PhoneRepository {
 //
 //    }
 
+    public String phoneModify(int index, PhoneDTO modifyPhone) {
+        phoneDB.getPhones().set(index, modifyPhone);
 
-    public String phoneModify(String name, int num, String modi){ //수정메서드 미완성
+        return "수정완료";
+    }
+//    public String phoneModify(String name, int num, String modi){ //수정메서드 미완성
+//
+//        ArrayList phoneList = .get();
+//        PhoneDTO phones =//
+//        alist.set(0, "이것을 수정함");
+//        for (int i = 0; i < alist.size(); i++) {
+//            // 특정 인덱스의 값을 꺼내온다.
+//            System.out.println(alist.get(i));
+//        }
+//        switch (num) {
+//            case 1:
+//                phones.setName(modi);
+//                break;
+//            case 2:
+//                phones.setNumber(modi);
+//                break;
+//            case 3:
+//                phones.setAddress(modi);
+//                break;
+//            default:
+//                return "잘못된 입력입니다.";
+//        }
+//        return phones.toString(PhoneDTO) + " 로 수정 되었습니다.";
+//    }
 
-        ArrayList phoneList = .get();
-        PhoneDTO phones =
-
-        alist.set(0, "이것을 수정함");
-        for (int i = 0; i < alist.size(); i++) {
-            // 특정 인덱스의 값을 꺼내온다.
-            System.out.println(alist.get(i));
+    public String phoneDelete(int no) {
+        int oldSize = phoneDB.getPhones().size();
+        phoneDB.getPhones().remove(no);
+        System.out.println(phoneDB.getPhones());
+        if(phoneDB.getPhones().size() >= oldSize){
+            return "삭제 실패하였습니다.";
         }
-
-
-        switch (num) {
-            case 1:
-                phones.setName(modi);
-                break;
-            case 2:
-                phones.setNumber(modi);
-                break;
-            case 3:
-                phones.setAddress(modi);
-                break;
-            default:
-                return "잘못된 입력입니다.";
-        }
-
-
-        return phones.toString(PhoneDTO) + " 로 수정 되었습니다.";
+        return "삭제되었습니다.";
     }
 
 
